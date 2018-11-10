@@ -1,0 +1,145 @@
+#ToolBar {
+	-fx-min-width: 50px;
+}
+
+#Room, #Erase, #Path, #Door, #Move, #Select {
+	-fx-min-height: 40px;
+	-fx-min-width: 40px;
+	-fx-background-color: transparent ;
+	-fx-background-size: contain ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+#Room {
+	-fx-background-image: url("../icons/40xp/plans.png");
+}
+#Select {
+	-fx-background-image: url("../icons/40xp/cursor.png");
+}
+#Move {
+	-fx-background-image: url("../icons/40xp/move.png");
+}
+#Erase {
+	-fx-background-image: url("../icons/40xp/eraser.png");
+}
+#Path {
+	-fx-background-image: url("../icons/40xp/road.png");
+}
+#Door {
+	-fx-background-image: url("../icons/40xp/doorway.png");
+}
+#Room:hover, #Erase:hover, #Path:hover, #Door:hover, #Move:hover, #Select:hover {
+	-fx-background-color: lightgray ;
+}
+#Room:pressed, #Erase:pressed, #Path:pressed, #Door:pressed, #Move:pressed, #Select:pressed {
+	-fx-background-color: gray ;
+}
+
+#Save-icon, #Credit-icon, #New-icon, #Info-icon, #Exit-icon, #Help-icon, #Open-icon {
+	-fx-min-height: 20px;
+	-fx-min-width: 20px;
+	-fx-background-color: transparent ;
+	-fx-background-size: contain ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+#Save-icon {
+	-fx-background-image: url("../icons/20xp/save.png");
+}
+#Credit-icon {
+	-fx-background-image: url("../icons/20xp/open-book.png");
+}
+#New-icon {
+	-fx-background-image: url("../icons/20xp/new-file.png");
+}
+#Exit-icon {
+	-fx-background-image: url("../icons/20xp/exit.png");
+}
+#Info-icon {
+	-fx-background-image: url("../icons/20xp/information.png");
+}
+#Help-icon {
+	-fx-background-image: url("../icons/20xp/question.png");
+}
+#Open-icon {
+	-fx-background-image: url("../icons/20xp/open-archive.png");
+}
+
+/*hide arrow of MenuButton*/
+#Path, #Room > .arrow-button > .arrow {
+    -fx-padding: 0;
+}
+/***********************************
+/**       customized css          **
+/***********************************/
+.root{
+
+    -fx-font-size: 12pt;
+
+    -fx-font-family: "Courier New";
+
+    -fx-base: rgb(132, 145, 47);
+
+    -fx-background: rgb(225, 228, 203);
+
+}
+
+
+#top-menu {
+
+    -fx-font: bold italic 16pt "Arial";
+
+    -fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );
+
+}
+
+#CPoint {
+	-fx-stroke-width: 0.5px;
+	-fx-fill: lightgrey;
+	-fx-stroke: grey;
+}
+
+#CPoint-highlighted {
+	-fx-stroke-width: 0.5px;
+	-fx-fill: blue;
+	-fx-stroke: violet;
+}
+
+#shape {
+	-fx-opacity:                1.0;
+    -fx-fill:                   #90EE90;
+    -fx-stroke:                 #006400;
+    -fx-stroke-width:           4px;
+}
+
+#shape-highlighted {
+    -fx-fill:                   gold;
+    -fx-stroke:                 red;
+    -fx-stroke-dash-array:      25 25;
+}
+
+#bottomBar {
+	-fx-background-color: #c0c0c0;
+	-fx-spacing: 20px;
+	-fx-font: 12px "Microsoft yahei";
+}
+
+#details {
+	-fx-background-color: #a3c48a;
+	
+}
+#ListView{
+	-fx-fill-color: #7184a4;
+	-fx-padding: 10px;
+	-fx-stroke: #000000;
+	-fx-stroke-width: 3px;
+}
+#mapArea{
+	-fx-background-color: #d7d8c5;
+}
+#Path{
+	-fx-opacity:                1;
+    -fx-fill:                   null;
+    -fx-stroke:                 #64A664;
+    -fx-stroke-width:           8px;
+}
