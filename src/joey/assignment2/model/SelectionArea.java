@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
+import javafx.collections.transformation.FilteredList;
 import javafx.geometry.Point2D;
 import javafx.scene.Node;
 import javafx.scene.paint.Color;
@@ -62,12 +62,12 @@ public class SelectionArea extends Rectangle{
 		highLightList();
 	}
 
-	public boolean contains( Node node){
+	public boolean contains(Node node){
 		return getBoundsInLocal().contains( node.getBoundsInLocal());
 	}
 
-	public void containsAny( ObservableList<Node> nodes, Consumer<Node> consumer){
-		nodes.filtered( this::contains).forEach( consumer);
+	public void containsAny( FilteredList<Node> filteredList, Consumer<Node> consumer){
+		filteredList.filtered( this::contains).forEach( consumer);
 	}
 	
 	

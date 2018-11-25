@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
+import com.sun.xml.internal.ws.encoding.soap.SOAP12Constants;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.paint.Color;
@@ -222,6 +224,5 @@ public class CurvePath extends CubicCurve implements ReadAndWritable{
 	@Override
 	public void translate(double x, double y) {
 		getLockedShapes().forEach(m->m.translate(x, y));
-		
 	}
 }

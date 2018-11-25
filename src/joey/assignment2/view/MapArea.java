@@ -6,6 +6,8 @@ import java.util.Observable;
 import java.util.Observer;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
+
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventTarget;
 import javafx.scene.Cursor;
@@ -79,6 +81,7 @@ public final class MapArea extends Pane implements Observer {
 	// constructor
 	public MapArea() {
 		children = getChildren();
+		
 		registerMouseEvent();
 
 		setId("mapArea");// just set background-color
@@ -184,7 +187,9 @@ public final class MapArea extends Pane implements Observer {
 				startY = e.getY();
 				break;
 			case ROOM:
-					active.reDraw(startX, startY, e.getX(), e.getY(), true);
+					if(shapeSide == -1) {return;}else {
+					System.out.println(shapeSide);
+					active.reDraw(startX, startY, e.getX(), e.getY(), true);}
 				break;
 			case CURVEDPATH:
 				if (curvedPath != null)curvedPath.redrawPath(startX, startY, xp, yp);
