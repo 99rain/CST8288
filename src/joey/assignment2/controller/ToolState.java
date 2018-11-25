@@ -57,6 +57,8 @@ public class ToolState extends Observable {
 	public void command(Tool t, int num) {
 		command(t, ShapeType.CUSTOM);
 		setSide(num);
+		setChanged();
+		notifyObservers(Arrays.asList(tool, type, side));
 	}
 
 	// update status for observers.
